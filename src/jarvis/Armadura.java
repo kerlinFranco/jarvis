@@ -21,7 +21,7 @@ public class Armadura {
     public Armadura() {
         Bota b1=new Bota();
         Bota b2=new Bota();
-        Bota[] botas={b1,b2};
+        botas=new Bota[]{b1,b2};
     }
     
     
