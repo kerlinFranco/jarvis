@@ -10,8 +10,10 @@ package jarvis;
  * @author USURIO
  */
 public class Armadura {
-    private int salud;
+    private int salud=100;
     private Bota[] botas=new Bota[2];
     private Guante[] guantes=new Guante[2];
+    private double Bateria=100;
+    
     
 }
