@@ -34,7 +34,8 @@ public class Armadura {
        if(Bateria>=pasos && botas[0].isRoto()==false && botas[1].isRoto()==false){
           for (int i=0; i<= pasos; i++) {
             Bateria--;
-          if(i%10==0){
+              System.out.println("pasos"+i);
+          if(i%10==0&&i!=0){
               int num=ram.nextInt(10);
               if(num==1||num==2||num==0){
                   botas[ram.nextInt(2)].setRoto(true);

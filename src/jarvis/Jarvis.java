@@ -15,7 +15,9 @@ public class Jarvis {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       Armadura a1=new Armadura();
+       
+       a1.caminar();
     }
     
 }
