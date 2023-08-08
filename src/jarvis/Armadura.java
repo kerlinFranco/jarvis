@@ -161,5 +161,12 @@ public class Armadura {
             System.out.println("Bateria insuficiente");
         }
     }
+     
+    public void disparar(){
+        if(Bateria>(guantes[0].getConsumo())*3){
+            System.out.println("Disparaste");
+            Bateria-=(guantes[0].getConsumo())*3;
+        }
+    }
 
 }
