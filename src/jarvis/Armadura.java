@@ -33,7 +33,14 @@ public class Armadura {
         int pasos=leer.nextInt();
        if(Bateria>=pasos && botas[0].isRoto()==false && botas[1].isRoto()==false){
           for (int i=0; i<= pasos; i++) {
-            Bateria--;
+            Bateria-=botas[0].getConsumo();
+            botas[0].setSalud(botas[0].getSalud()-1);
+            botas[1].setSalud(botas[1].getSalud()-1);
+            if(botas[0].getSalud()==0||botas[1].getSalud()==0){
+                botas[0].setRoto(true);
+                botas[1].setRoto(true);
+                break;
+            }
               System.out.println("pasos"+i);
           if(i%10==0&&i!=0){
               int num=ram.nextInt(10);
