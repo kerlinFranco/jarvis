@@ -17,7 +17,10 @@ public class Jarvis {
     public static void main(String[] args) {
        Armadura a1=new Armadura();
        
-       a1.caminar();
+       //a1.caminar();
+       //a1.correr();
+       a1.propulsar();
+       //a1.volar();
     }
     
 }
