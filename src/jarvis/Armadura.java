@@ -19,9 +19,8 @@ public class Armadura {
     private double Bateria=100;
 
     public Armadura() {
-        Bota b1=new Bota();
-        Bota b2=new Bota();
-        Bota[] botas={b1,b2};
+        botas[0]=new Bota();
+        botas[1]=new Bota();
     }
     
     
