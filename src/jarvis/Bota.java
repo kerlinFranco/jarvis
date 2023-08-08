@@ -10,8 +10,18 @@ package jarvis;
  * @author Matias
  */
 public class Bota {
-
+ private boolean Roto=false;
     public Bota() {
     }
+
+    public boolean isRoto() {
+        return Roto;
+    }
+
+    public void setRoto(boolean Roto) {
+        this.Roto = Roto;
+    }
+    
+    
     
 }
