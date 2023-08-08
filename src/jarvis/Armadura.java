@@ -59,11 +59,18 @@ public class Armadura {
     }
     
     public void correr(){
-            System.out.println("Cuantos pasos desea correr");
+        System.out.println("Cuantos pasos desea correr");
         int pasos=leer.nextInt();
        if(Bateria>=pasos && botas[0].isRoto()==false && botas[1].isRoto()==false){
           for (int i=0; i<= pasos; i++) {
-            Bateria-=3;
+            Bateria-=botas[0].getConsumo();
+            botas[0].setSalud(botas[0].getSalud()-2);
+            botas[1].setSalud(botas[1].getSalud()-2);
+            if(botas[0].getSalud()==0||botas[1].getSalud()==0){
+                botas[0].setRoto(true);
+                botas[1].setRoto(true);
+                break;
+            }
               System.out.println("pasos"+i);
           if(i%10==0&&i!=0){
               int num=ram.nextInt(10);
@@ -76,6 +83,35 @@ public class Armadura {
         } 
        }else{
            System.out.println("Bateria insuficiente");
-       }    
+       }
     }
+
+    public void propulsar(){
+                System.out.println("Cuanto desea propulsarse en metros");
+        int metros=leer.nextInt();
+       if(Bateria>=metros && botas[0].isRoto()==false && botas[1].isRoto()==false){
+          for (int i=0; i<= metros; i++) {
+            Bateria-=botas[0].getConsumo();
+            botas[0].setSalud(botas[0].getSalud()-3);
+            botas[1].setSalud(botas[1].getSalud()-3);
+            if(botas[0].getSalud()==0||botas[1].getSalud()==0){
+                botas[0].setRoto(true);
+                botas[1].setRoto(true);
+                break;
+            }
+              System.out.println("metros"+i);
+          if(i%10==0&&i!=0){
+              int num=ram.nextInt(10);
+              if(num==1||num==2||num==0){
+                  botas[ram.nextInt(2)].setRoto(true);
+                  System.out.println("La se rompio una bota");
+                  break;
+              }
+          }  
+        } 
+       }else{
+           System.out.println("Bateria insuficiente");
+       }
+    }
+        
 }
