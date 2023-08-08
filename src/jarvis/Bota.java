@@ -11,6 +11,10 @@ package jarvis;
  */
 public class Bota {
  private boolean Roto=false;
+ private int consumo=2;
+ private int salud=100;
+ 
+ 
     public Bota() {
     }
 
@@ -20,6 +24,22 @@ public class Bota {
 
     public void setRoto(boolean Roto) {
         this.Roto = Roto;
+    }
+
+    public int getConsumo() {
+        return consumo;
+    }
+
+    public void setConsumo(int consumo) {
+        this.consumo = consumo;
+    }
+
+    public int getSalud() {
+        return salud;
+    }
+
+    public void setSalud(int salud) {
+        this.salud = salud;
     }
     
     
