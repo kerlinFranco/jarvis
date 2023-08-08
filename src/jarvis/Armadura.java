@@ -50,4 +50,8 @@ public class Armadura {
         
         
     }
+    
+    public void correr(){
+        
+    }
 }
