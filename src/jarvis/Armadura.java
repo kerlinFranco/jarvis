@@ -52,6 +52,23 @@ public class Armadura {
     }
     
     public void correr(){
-        
+            System.out.println("Cuantos pasos desea correr");
+        int pasos=leer.nextInt();
+       if(Bateria>=pasos && botas[0].isRoto()==false && botas[1].isRoto()==false){
+          for (int i=0; i<= pasos; i++) {
+            Bateria-=3;
+              System.out.println("pasos"+i);
+          if(i%10==0&&i!=0){
+              int num=ram.nextInt(10);
+              if(num==1||num==2||num==0){
+                  botas[ram.nextInt(2)].setRoto(true);
+                  System.out.println("La se rompio una bota");
+                  break;
+              }
+          }  
+        } 
+       }else{
+           System.out.println("Bateria insuficiente");
+       }    
     }
 }
