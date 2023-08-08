@@ -10,5 +10,8 @@ package jarvis;
  * @author Matias
  */
 public class Bota {
+
+    public Bota() {
+    }
     
 }

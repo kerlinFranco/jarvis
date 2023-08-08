@@ -17,6 +17,13 @@ public class Armadura {
     private Bota[] botas=new Bota[2];
     private Guante[] guantes=new Guante[2];
     private double Bateria=100;
+
+    public Armadura() {
+        Bota b1=new Bota();
+        Bota b2=new Bota();
+        Bota[] botas={b1,b2};
+    }
+    
     
     public void caminar(){
         System.out.println("Cuantos pasos desea caminar");
@@ -24,6 +31,7 @@ public class Armadura {
        if(Bateria>=pasos){
           for (int i=0; i<= pasos; i++) {
             Bateria--;
+            
         } 
        }else{
            System.out.println("Bateria insuficiente");
