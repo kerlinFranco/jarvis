@@ -168,5 +168,9 @@ public class Armadura {
             Bateria-=(guantes[0].getConsumo())*3;
         }
     }
+    
+    public void estadoBateria(){
+        System.out.println("La bateria de la armadura es "+Bateria+"%");
+    }
 
 }
